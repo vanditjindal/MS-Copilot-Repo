@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Shop</title>
+    <style>
+        /* Pastel color scheme */
+        body { background-color: #f0e1f4; color: #333; }
+        header, section { padding: 20px; }
+        footer { background-color: #e9ecef; padding: 1rem; text-align: center; }
+        /* Additional styles */
+        .product { margin-bottom: 15px; }
+        .product img { width: 100px; height: auto; }
+        .product-details { display: flex; justify-content: space-between; align-items: center; }
+        button { background-color: #a1d6e2; border: none; padding: 10px 20px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<!-- Home Page Content -->
+<header>
+    <h1>Welcome to Our Flower Shop</h1>
+    <p>Discover the beauty of fresh flowers...</p>
+</header>
+
+<!-- Products Page Content -->
+<section id="products">
+    <h2>Our Products</h2>
+    <div class="product">
+        <div class="product-details">
+            <span>Rose Bouquet</span>
+            <button onclick="addToCart('Rose Bouquet')">Add to Cart</button>
+        </div>
+    </div>
+    <div class="product">
+        <div class="product-details">
+            <span>Sunflower Arrangement</span>
+            <button onclick="addToCart('Sunflower Arrangement')">Add to Cart</button>
+        </div>
+    </div>
+    <!-- Add more products here -->
+</section>
+
+<!-- Checkout Page Content -->
+<section id="checkout">
+    <h2>Checkout</h2>
+    <p id="cart-items">Your cart is empty.</p>
+    <!-- Add checkout form here -->
+</section>
+
+<!-- Footer Content -->
+<footer>
+    <p>Contact us at: contact@flowershop.com</p>
+    <p>Location: 123 Petal Lane, Garden City</p>
+    <p><a href=" ">Site Map</a> | <a href=" ">Privacy Policy</a></p>
+    <p>© 2024 Flower Shop. All rights reserved.</p>
+</footer>
+
+<script>
+    // JavaScript for adding items to the cart
+    function addToCart(item) {
+        const cartItems = document.getElementById('cart-items');
+        if (cartItems.innerHTML === 'Your cart is empty.') {
+            cartItems.innerHTML = item;
+        } else {
+            cartItems.innerHTML += ', ' + item;
+        }
+    }
+</script>
+
+</body>
+</html>
